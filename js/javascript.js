@@ -1,7 +1,3 @@
-/**	CMPE 273 - HW1
- * 	Yu Fu
- * JavaScript
- */ 
 
 /** 1. variable
 */
