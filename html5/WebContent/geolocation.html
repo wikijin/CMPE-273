@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="geo"></p>
+<p id=latitude></p>
+<p id=longitude></p>
+
+<script>
+var latitude = document.getElementById("latitude");
+var longitude = document.getElementById("longitude");
+var showMap = function(position) {
+	latitude.innerHTML="latitude: "+position.coords.latitude;
+	longitude.innerHTML="longitude: "+position.coords.longitude;
+};
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showMap);
+} else {
+	latitude.innerHTML = 'not support';
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Local Storage</title>
+</head>
+<body>
+
+<div>
+
+Input Local Storage Data:<br>
+<input type ="text" id="input"> 
+
+<button onclick="saveLocal()">Save</button>
+
+<button onclick="showLocal()">Print</button>
+</div>
+<p id="textData"> Local Data! </p>
+
+<script>
+
+function saveLocal(){
+	localStorage.savedData = document.getElementById("input").value;
+	document.getElementById("textData").innerHTML = "Saved ";
+	}
+	
+function showLocal(){
+	document.getElementById("textData").innerHTML = 
+		"Local Data is: " + localStorage.savedData;
+	}
+	
+</script>
+</body>
+</html>
